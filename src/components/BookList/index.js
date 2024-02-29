@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import Header from "../Header";
 import SearchInput from '../SearchInput';
+import PriceRange from '../PriceRange';
 import Loader from '../Loader'
 import ErrorMessage from '../ErrorMessage'
 
@@ -14,6 +15,7 @@ class BookList extends Component{
             <div className="book-list-container">
                 <div className="book-list-content-container">
                    <SearchInput/>
+                   <PriceRange/>
                    <Loader/>
                    <ErrorMessage/>
                 </div>
