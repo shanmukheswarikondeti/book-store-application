@@ -43,7 +43,9 @@ const Cart=()=>{
                         <h1 className="cart-price">Price</h1>
                     </div>
                     <p className="order-text">(inclusive of all taxes)</p>
-                    <button className="checkout-button"disabled={isCartEmpty}>Proceed to Checkout</button>
+                    <Link to="/checkout" className="nav-link">
+                        <button className="checkout-button"disabled={isCartEmpty}>Proceed to Checkout</button>
+                    </Link>
                 </div>
             </div>
 
