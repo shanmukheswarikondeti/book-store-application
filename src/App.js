@@ -29,6 +29,10 @@ class App extends Component{
       this.setState({cartList:updatedCartList});
     };
 
+    resetCart=()=>{
+      this.setState({cartList:[]});
+    };
+
     render(){
       const {cartList}=this.state;
     return(
@@ -37,8 +41,8 @@ class App extends Component{
           value={{
             cartList,
             addToCart: this.addToCart,
-            deleteFromCart: this.deleteFromCart
-            
+            deleteFromCart: this.deleteFromCart,
+            resetCart: this.resetCart
           }}
           >
 

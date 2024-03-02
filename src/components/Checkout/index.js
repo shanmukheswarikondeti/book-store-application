@@ -57,7 +57,8 @@ class Checkout extends Component {
         {value => {
           const onFormSubmitSuccess = () => {
             this.setState({ isOrderPlaced: true });
-            
+            const {resetCart}=value;
+            resetCart();
           };
   
           return (
