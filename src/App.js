@@ -22,6 +22,13 @@ class App extends Component{
       }));
     };
 
+    deleteFromCart=(bookId)=>{
+      const updatedCartList=this.state.cartList.filter((eachCartItem)=>
+        eachCartItem.isbn13!==bookId
+      );
+      this.setState({cartList:updatedCartList});
+    };
+
     render(){
       const {cartList}=this.state;
     return(
@@ -29,7 +36,8 @@ class App extends Component{
        <CartContext.Provider
           value={{
             cartList,
-            addToCart: this.addToCart
+            addToCart: this.addToCart,
+            deleteFromCart: this.deleteFromCart
             
           }}
           >
